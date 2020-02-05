@@ -9,6 +9,8 @@ void selection_sort(int *array, size_t size)
 	int tmpin, tmpn;
 	size_t i, j;
 
+	if (!size || !size)
+		return;
 	for (i = 0; i < size; i++)
 	{
 		tmpn = array[i];
@@ -20,7 +22,7 @@ void selection_sort(int *array, size_t size)
 				tmpn = array[j];
 			}
 		}
-		if(tmpn < array[i])
+		if (tmpn < array[i])
 		{
 			array[tmpin] = array[i];
 			array[i] = tmpn;
